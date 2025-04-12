@@ -21,11 +21,15 @@ Una aplicación web desarrollada con **Angular 19** que permite buscar y visuali
 ## 📦 Instalación
 
 1. Clona el repositorio:
+```bash
     git clone https://github.com/RobertoVillalon/gifsApp.git
     cd gifsApp
+```
 
 2. Instala las dependencias:
+```bash
     npm install
+```
 
 3. Genera un archivo .env en la carpeta de environments que contenga tu ApiKey de Giphy
 
@@ -35,5 +39,6 @@ Una aplicación web desarrollada con **Angular 19** que permite buscar y visuali
         };
 
 4. Levanta el Servidor
-
+```bash
     ng serve
+```
