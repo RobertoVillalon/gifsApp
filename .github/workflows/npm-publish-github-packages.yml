@@ -42,7 +42,7 @@ jobs:
         run: ls -R dist
 
       - name: Copy index.html to 404.html
-        run: cp dist/gifs-app/index.html dist/gifs-app/404.html
+        run: cp dist/gifs-app/browser/index.html dist/gifs-app/browser/404.html
 
       - name: Deploy to GitHub Pages
         run: |
