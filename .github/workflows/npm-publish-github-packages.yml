@@ -36,7 +36,7 @@ jobs:
           echo "};" >> src/environments/environment.ts
 
       - name: Build Angular app
-        run: ng build --configuration=production --base-href="/<REPO_NAME>/"
+        run: ng build --configuration=production --base-href="/gifsApp/"
         # reemplaza <REPO_NAME> por el nombre de tu repo, ej. testCICD
 
       - name: Deploy to GitHub Pages
