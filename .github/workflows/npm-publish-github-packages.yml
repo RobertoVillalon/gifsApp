@@ -23,6 +23,11 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
+      - name: Set Git author identity
+        run: |
+          git config --global user.name "RobertoVillalon"
+          git config --global user.email "robertoantonio3756@gmail.com"
+
       - name: Create environment.ts with secrets
         run: |
           mkdir -p src/environments
