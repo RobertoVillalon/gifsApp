@@ -34,13 +34,12 @@ jobs:
           echo "  giphyApiKey: '${{ secrets.GIPHY_API_KEY }}'," >> src/environments/environment.ts
           echo "  giphyUrl: 'https://api.giphy.com/v1'," >> src/environments/environment.ts
           echo "};" >> src/environments/environment.ts
-          
-      - name: Copy index.html to 404.html
-        run: cp dist/gifs-app/index.html dist/gifs-app/404.html
         
       - name: Build Angular app
         run: ng build --configuration=production --base-href="/gifsApp/"
-        # reemplaza <REPO_NAME> por el nombre de tu repo, ej. testCICD
+
+      - name: Copy index.html to 404.html
+        run: cp dist/gifs-app/index.html dist/gifs-app/404.html
 
       - name: Deploy to GitHub Pages
         run: |
