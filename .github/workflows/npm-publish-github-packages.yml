@@ -23,14 +23,17 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
-      - name: Create environment.ts
+      - name: Create environment.ts with secrets
         run: |
           mkdir -p src/environments
           echo "export const environment = {" > src/environments/environment.ts
           echo "  production: true," >> src/environments/environment.ts
-          echo "  giphyApiKey: '${{ secrets.GIPHYAPIKEY }}'" >> src/environments/environment.ts
+          echo "  companyName: 'Gifs'," >> src/environments/environment.ts
+          echo "  companyName2: 'App'," >> src/environments/environment.ts
+          echo "  companySlogan: 'Maneja tus gifs'," >> src/environments/environment.ts
+          echo "  giphyApiKey: '${{ secrets.GIPHY_API_KEY }}'," >> src/environments/environment.ts
+          echo "  giphyUrl: 'https://api.giphy.com/v1'," >> src/environments/environment.ts
           echo "};" >> src/environments/environment.ts
-
 
       - name: Build Angular app
         run: ng build --configuration=production --base-href="/<REPO_NAME>/"
