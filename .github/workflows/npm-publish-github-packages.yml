@@ -45,7 +45,7 @@ jobs:
         run: cp dist/gifs-app/browser/index.html dist/gifs-app/browser/404.html
 
       - name: Create .nojekyll
-        run: echo "" > dist/browser/.nojekyll
+        run: echo "" > dist/gifs-app/browser/.nojekyll
 
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/browser --no-silent --branch=gh-pages
