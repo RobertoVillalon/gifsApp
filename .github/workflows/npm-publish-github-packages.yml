@@ -39,7 +39,7 @@ jobs:
         run: ng build --configuration=production --base-href="/gifsApp/"
 
       - name: Copy index.html to 404.html
-        run: cp dist/gifs-app/index.html dist/gifs-app/404.html
+        run: cp /home/runner/work/gifsApp/gifsApp/dist/gifs-app/index.html /home/runner/work/gifsApp/gifsApp/dist/gifs-app/404.html
 
       - name: Deploy to GitHub Pages
         run: |
