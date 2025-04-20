@@ -45,7 +45,6 @@ jobs:
         run: cp dist/gifs-app/browser/index.html dist/gifs-app/browser/404.html
 
       - name: Deploy to GitHub Pages
-        run: |
-          npx angular-cli-ghpages --dir=dist/gifs-app/browser
+        run: npx angular-cli-ghpages --dir=dist/browser --no-silent --no-skip-git --branch=gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
