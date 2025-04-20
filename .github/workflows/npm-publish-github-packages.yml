@@ -31,7 +31,7 @@ jobs:
           echo "  companyName: 'Gifs'," >> src/environments/environment.ts
           echo "  companyName2: 'App'," >> src/environments/environment.ts
           echo "  companySlogan: 'Maneja tus gifs'," >> src/environments/environment.ts
-          echo "  giphyApiKey: '${{ secrets.GIPHY_API_KEY }}'," >> src/environments/environment.ts
+          echo "  giphyApiKey: '${{ secrets.GIPHYAPIKEY }}'," >> src/environments/environment.ts
           echo "  giphyUrl: 'https://api.giphy.com/v1'," >> src/environments/environment.ts
           echo "};" >> src/environments/environment.ts
         
