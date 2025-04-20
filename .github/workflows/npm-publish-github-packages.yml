@@ -37,15 +37,15 @@ jobs:
         
       - name: Build Angular app
         run: ng build --configuration=production --base-href="/gifsApp/"
-        
-      - name: Verificar contenido de dist
-        run: ls -R dist
 
       - name: Copy index.html to 404.html
         run: cp dist/gifs-app/browser/index.html dist/gifs-app/browser/404.html
 
       - name: Create .nojekyll
         run: echo "" > dist/gifs-app/browser/.nojekyll
+
+      - name: Verificar contenido de dist
+        run: ls -R dist
 
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/browser --no-silent --branch=gh-pages
