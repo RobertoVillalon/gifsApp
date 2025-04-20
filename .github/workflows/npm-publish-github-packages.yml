@@ -23,6 +23,15 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
+      - name: Create environment.ts
+        run: |
+          mkdir -p src/environments
+          echo "export const environment = {" > src/environments/environment.ts
+          echo "  production: true," >> src/environments/environment.ts
+          echo "  giphyApiKey: '${{ secrets.GIPHY_API_KEY }}'" >> src/environments/environment.ts
+          echo "};" >> src/environments/environment.ts
+
+
       - name: Build Angular app
         run: ng build --configuration=production --base-href="/<REPO_NAME>/"
         # reemplaza <REPO_NAME> por el nombre de tu repo, ej. testCICD
