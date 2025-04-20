@@ -3,7 +3,11 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches: [main] # o cualquier rama que uses para desplegar
-
+    
+permissions:
+  contents: write
+  packages: read
+  
 jobs:
   build:
     runs-on: ubuntu-latest
