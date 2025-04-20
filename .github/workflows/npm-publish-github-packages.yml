@@ -46,6 +46,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          npx angular-cli-ghpages --dir=dist/gifs-app
+          npx angular-cli-ghpages --dir=dist/gifs-app/browser
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
